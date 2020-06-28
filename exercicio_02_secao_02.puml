@@ -1,0 +1,55 @@
+@startuml
+
+class Jogador {
+    -<<oid>> id: Integer
+    -nome: String
+    -dataNascimento: Date
+    -sexo: String
+    -altura: Double
+    -idade: Integer
+    -capitao: Boolean
+}
+
+class Time {
+    -<<oid>> id: Integer
+    -nome: String
+    -tecnico: String
+}
+
+class Estadio {
+    -<<oid>> id: Integer
+    -nome: String
+    -sede: Boolean
+}
+
+class Partida {
+    -<<oid>> id: Integer
+    -dataPartida: Date
+    -aconteceu: Boolean
+    -visitante: Boolean
+    -pontuacao: Integer
+    -venceu: Boolean
+    -empate: Boolean
+    -derrota: Boolean
+}
+
+class Campeonato {
+    -<<oid>> id: Integer
+    -ano: Integer
+    -nome: String
+    -dataInicio: Date
+    -dataFim: Date
+    -quantidadeTotalPartida: Integer
+}
+
+class Endereco {
+    -<<oid>> id: Integer
+    -rua: String
+    -numero: Integer
+    -bairro: String
+    -complemento: String
+    -cidade: String
+    -estado: String
+}
+
+@enduml

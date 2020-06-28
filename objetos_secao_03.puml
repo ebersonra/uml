@@ -1,0 +1,46 @@
+@startuml
+
+object "new Pessoa()" as Pessoa {
+    -<<oid>> id= 2031
+    -name = "Greg"
+}
+object "new Pessoa()" as Pessoa2 {
+    -<<oid>> id= 7513
+    -name= "John"
+}
+object "new Pessoa()" as Pessoa3 {
+    -<<oid>> id= 1394
+    -name= "Martha"
+}
+object "new Pessoa()" as Pessoa4 {
+    -<<oid>> id= 8015
+    -name= "Chris"
+}
+
+object "new Carro()" as Carro {
+    -<<oid>> id= 1001
+    -modelo= "Fox"
+    -ano= 2015
+}
+object "new Carro()" as Carro2 {
+    -<<oid>> id= 1002
+    -modelo= "Van Plus"
+    -ano= 2017
+}
+object "new Carro()" as Carro3 {
+    -<<oid>> id= 1003
+    -modelo= "Cross Hatch"
+    -ano= 2014
+}
+object "new Carro()" as Carro4 {
+    -<<oid>> id= 1004
+    -modelo= "Convert"
+    -ano= 1998
+}
+
+Pessoa --- Carro
+Pessoa3 --- Carro2
+Pessoa3 --- Carro4
+Pessoa4 --- Carro3
+
+@enduml

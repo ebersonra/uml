@@ -1,0 +1,74 @@
+@startuml
+
+object "new Artista()" as Artista {
+    -<<oid>> id= 1
+    -nome= "Bruno e Marrone"
+    -nacionalidade= "Brasileiro"
+}
+object "new Artista()" as Artista2 {
+    -<<oid>> id= 2
+    -nome= "Chitãozinho e Xororo"
+    -nacionalidade= "Brasileiro"
+}
+
+object "new Album()" as Album {
+    -<<oid>> id= 1
+    -nome= "Inevitavel"
+    -ano= 2000
+}
+object "new Album()" as Album2 {
+    -<<oid>> id= 2
+    -nome= "Choram as Rosas"
+    -ano= 2013
+}
+object "new Album()" as Album3 {
+    -<<oid>> id= 3
+    -nome= "Estudio Bar"
+    -ano= 2018
+}
+
+object "new Musica()" as Musica {
+    -<<oid>> id= 1
+    -nome= "Inevitavel"
+    -duracao= 3000
+}
+object "new Musica()" as Musica2 {
+    -<<oid>> id= 2
+    -nome= "Beijo de Varanda"
+    -duracao= 2400
+}
+object "new Musica()" as Musica3 {
+    -<<oid>> id= 3
+    -nome= "Choram as Rosas"
+    -duracao= 2400
+}
+object "new Musica()" as Musica4 {
+    -<<oid>> id: 4
+    -nome= "Isso se não conta"
+    -duracao= 1800
+}
+
+Artista --- Album
+Artista --- Album2
+Artista --- Album3
+Artista2 --- Album
+
+Musica --- Album
+Musica2 --- Album3
+Musica3 --- Album2
+Musica4 --- Album3
+
+Artista --- Musica4: autores
+Artista --- Musica4: interpretes
+
+Artista --- Musica3: autores
+Artista --- Musica3: interpretes
+
+Artista --- Musica2: autores
+Artista --- Musica2: interpretes
+
+Artista --- Musica: autores
+Artista --- Musica: interpretes
+
+Artista2 --- Musica: interpretes
+@enduml

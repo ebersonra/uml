@@ -1,0 +1,33 @@
+@startuml
+
+class Usuario {
+    -<<oid>> id: Integer
+    -nome: String
+    -dataNascimento: Date
+    -senha: String
+    -email: String
+    -sexo: String
+    -telefone: String
+    -website: String
+}
+
+class LinhaTempo {
+    -<<oid>> id: Integer
+    -idUsuario: Integer
+    -IdPostagem: Integer
+}
+
+class Postagem {
+    -<<oid>> id: Integer
+    -anexo: Boolean
+    -conteudo: String
+    -dataPostagem: Date
+}
+
+class Album {
+    -<<oid>> id: Integer
+    -titulo: String
+    -uriFoto: String
+}
+
+@enduml
